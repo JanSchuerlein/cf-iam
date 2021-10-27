@@ -10,7 +10,7 @@ However, this mode does not have an automatic way to be turned on, it's always a
 
 This is were **CF-IAM** comes into place. 
 
-**CF-IAM** is a simple node application for automatically enabling [Cloudflares](https://cloudflare.com "Cloudflares") "***Im under Attack mode***" to prevent ddos attacks, when the webserver exceeds a defined concurrent active connections limit.
+**CF-IAM** is a simple node application for automatically enabling [Cloudflares](https://cloudflare.com "Cloudflares") "***Im under Attack mode***" to mitigate the impact of an may accouring ddos attack, when the webserver exceeds a defined concurrent active connections limit.
 
 Unlike other publicly available scripts, it focuses not on the CPU usage on the host, but on the concurrent connections currently active with the NGINX webserver.
 
