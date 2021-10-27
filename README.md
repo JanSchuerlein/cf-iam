@@ -45,17 +45,15 @@ Execute the following command:
 - Inside the file add the following content:
 
 
+	server {
+		listen 127.0.0.1:80;
 
-    server {
-	
-        listen 127.0.0.1:80;
-		
-        server_name 127.0.0.1;
-    
-        location /nginx_status {
-            stub_status;
-        }
-    }
+		server_name 127.0.0.1;
+
+		location /nginx_status {
+			stub_status;
+		}
+	}
 
 - Restart your nginx webserver using the command:
 
