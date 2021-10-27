@@ -1,0 +1,12 @@
+{
+  "name": "cf-iam",
+  "version": "1.0.0",
+  "description": "CF-IAM is a simple node application for automatically enabling Cloudflare's \"Im under Attack mode\" to mitigate the impact of an may accouring ddos attack, when the webserver exceeds a defined concurrent active connections limit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "JanSchuerlein",
+  "license": "ISC"
+}
