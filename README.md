@@ -40,9 +40,10 @@ Execute the following command:
 
 #### 2. Create VirtualHost "nginx_status"
 
-- On your webserver machine, navigate to your **/etc/nginx/sites-enabled/** directory and create a file called "**nginx_status**"
+- On your machine, navigate to your **/etc/nginx/sites-enabled/** directory and create a file called "**nginx_status**"
 
 - Inside the file add the following content:
+
 
 
 	server {
@@ -54,6 +55,7 @@ Execute the following command:
 			stub_status;
 		}
 	}
+
 
 - Restart your nginx webserver using the command:
 
