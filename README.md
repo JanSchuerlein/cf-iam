@@ -103,6 +103,7 @@ This should return something similar to this:
 
 **Copy the created API token**
 
+![Cloudflare Dashboard API Token Creation](.github/img/cloudflare-create-api-token.png)
 
 ------------
 
@@ -129,8 +130,8 @@ const connectionLimit = 500;
 ```
 
 - Replace the connectionLimit value with whatever you find suitable for your use case
-This value mainly depends on the normal active concurrent connections to your server
-While some sites can have thousands of active connections, another site does not exceed a couple hundred
+- This value mainly depends on the normal active concurrent connections to your server
+- While some sites can have thousands of active connections, another site does not exceed a couple hundred
 
 When the amount of current active connections exceeds the connectionLimit, the "**Im under attack mode**" will be turned on.
 
@@ -167,6 +168,8 @@ For that we open up crontab using the following command:
 Add the following line to the end of the file:
 
 `* * * * * /usr/bin/node /path/to/cf-iam/index.js`
+
+Make sure to replace "/path/to/cf-iam" with the path you cloned the repository to.
 
 This will execute **CF-IAM** every minute.
 
