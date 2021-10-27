@@ -1,4 +1,4 @@
-# CF-IAM
+# Introduction
 
 [Cloudflare](https://cloudflare.com "Cloudflare") provides a mode called "**Im under Attack**" for the security level of a zone.
 
@@ -9,6 +9,10 @@ In the event of an active ddos attack, this mode is widely used to additionally 
 However, this mode does not have an automatic way to be turned on, it's always a local modification the site admin has to make in the event of an attack.
 
 This is were **CF-IAM** comes into place. 
+
+-------------
+
+# CF-IAM
 
 **CF-IAM** is a simple node application for automatically enabling [Cloudflares](https://cloudflare.com "Cloudflares") "***Im under Attack mode***" to mitigate the impact of an may accouring ddos attack, when the webserver exceeds a defined concurrent active connections limit.
 
@@ -24,37 +28,40 @@ Installation of **CF-IAM** is really simple.
 
 **Note**: This setup is meant for linux environments only, technically the installation of nginx under windows is possible, however not recommended.
 
+-------------
+
 ## Requirements
 
 - NGINX
 - NodeJS
 
+-------------
+
 ## Setup
 
-#### 1. Clone the repository
+### 1. Clone the repository
 Execute the following command:
 
 `git clone https://github.com/JanSchuerlein/cf-iam`
 
 -------------
 
-#### 2. Create VirtualHost "nginx_status"
+### 2. Create VirtualHost "nginx_status"
 
 - On your webserver machine, navigate to your **/etc/nginx/sites-enabled/** directory and create a file called "**nginx_status**"
 
 - Inside the file add the following content:
 
+```
+server {
+    listen 127.0.0.1:80;
+    server_name 127.0.0.1;
 
-
-
-    server {
-        listen 127.0.0.1:80;
-        server_name 127.0.0.1;
-    
-        location /nginx_status {
-            stub_status;
-        }
+    location /nginx_status {
+        stub_status;
     }
+}
+```
 
 - Restart your nginx webserver using the command:
 
@@ -68,7 +75,6 @@ The virtualserver block will serve the nginx inbuild **sub_status** module, whic
 
 
 ------------
-
 
 
 To verify that the created virtualhost works as expected, run the following command:
@@ -86,7 +92,7 @@ This should return something similar to this:
 
 ------------
 
-#### 3. Create Cloudflare API Token
+### 3. Create Cloudflare API Token
 
 - Login to your [Cloudflare Dashboard](https://dash.cloudflare.com/profile "Cloudflare Dashboard") and navigate to your profile.
 - Under the section "**API Tokens**", click on "**Create Token**"
@@ -102,7 +108,7 @@ This should return something similar to this:
 
 
 
-#### 4. Configure CF-IAM
+### 4. Configure CF-IAM
 
 All configuration required is made in the **index.js** file.
 
@@ -148,7 +154,7 @@ You can also check the current statistics by executing the following curl comman
 
 
 
-#### 5. Setup Cron to automatically run CF-IAM
+### 5. Setup Cron to automatically run CF-IAM
 
 We now have everything in place to automatically turn on the "**Im under attack**" mode, when the active webserver connections are exceeding our defined limit.
 
