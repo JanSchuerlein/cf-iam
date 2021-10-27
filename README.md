@@ -37,7 +37,7 @@ Installation of **CF-IAM** is really simple.
 
 -------------
 
-## Setup
+## Installation & Setup
 
 ### 1. Clone the repository
 Execute the following command:
