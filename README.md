@@ -40,22 +40,21 @@ Execute the following command:
 
 #### 2. Create VirtualHost "nginx_status"
 
-- On your machine, navigate to your **/etc/nginx/sites-enabled/** directory and create a file called "**nginx_status**"
+- On your webserver machine, navigate to your **/etc/nginx/sites-enabled/** directory and create a file called "**nginx_status**"
 
 - Inside the file add the following content:
 
 
 
-	server {
-		listen 127.0.0.1:80;
 
-		server_name 127.0.0.1;
-
-		location /nginx_status {
-			stub_status;
-		}
-	}
-
+    server {
+        listen 127.0.0.1:80;
+        server_name 127.0.0.1;
+    
+        location /nginx_status {
+            stub_status;
+        }
+    }
 
 - Restart your nginx webserver using the command:
 
