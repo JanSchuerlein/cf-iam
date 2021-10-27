@@ -37,7 +37,7 @@ Installation of **CF-IAM** is really simple.
 
 -------------
 
-## Setup
+## Installation & Setup
 
 ### 1. Clone the repository
 Execute the following command:
@@ -178,7 +178,7 @@ Of course you can modify the cron to your needs and adjust the intervall how you
 
 ------------
 
-**Note**: Once activated, there is currently to function in place, that automatically de-activates the "**Im under attack mode**" mode when the current active connections have gone under the limit.
+**Note**: Once activated, there is currently no function in place, that automatically de-activates the "**Im under attack mode**" mode when the current active connections have gone under the limit.
 
 This maight be applicable for a future update of **CF-IAM**.
 
