@@ -44,6 +44,12 @@ Execute the following command:
 
 `git clone https://github.com/JanSchuerlein/cf-iam`
 
+**Alternative:**
+
+Install via NPM:
+
+`npm install cf-iam`
+
 -------------
 
 ### 2. Create VirtualHost "nginx_status"
