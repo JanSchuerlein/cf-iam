@@ -6,7 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "Cloudflare",
+    "DDoS",
+    "Janomine",
+    "JanSchuerlein"
+  ],
   "author": "JanSchuerlein",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JanSchuerlein/cf-iam.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JanSchuerlein/cf-iam/issues"
+  },
+  "homepage": "https://github.com/JanSchuerlein/cf-iam#readme"
 }
